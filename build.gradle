@@ -1,0 +1,51 @@
+group 'com.paytm.weblog'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'scala'
+sourceCompatibility = 1.8
+
+sourceSets {
+    main {
+       java {
+           srcDir 'java'
+       }
+
+        scala {
+            srcDir 'scala'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+  
+    compile group: 'org.scala-lang', name: 'scala-library', version: '2.11.8'
+
+
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-core_2.10
+    compile group: 'org.apache.spark', name: 'spark-core_2.11', version: '2.1.1'
+
+    compile group: 'org.apache.spark', name: 'spark-sql_2.11', version: '2.1.1'
+
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common
+    compile group: 'org.apache.hadoop', name: 'hadoop-common', version: '2.7.0'
+// https://mvnrepository.com/artifact/org.scala-lang.modules/scala-xml_2.11
+    compile group: 'org.scala-lang.modules', name: 'scala-xml_2.11', version: '1.0.6'
+
+
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-streaming_2.10
+    compile group: 'org.apache.spark', name: 'spark-streaming_2.11', version: '2.1.1'
+
+
+    testCompile 'org.scalatest:scalatest_2.11:3.0.0'
+
+}
+
+
+
